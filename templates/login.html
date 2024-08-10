@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOC Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Telnyx Logo" class="logo">
+        <h1>NOC Login</h1>
+        <p>Please login with your credentials to access this resource.</p>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <form action="{{ url_for('do_login') }}" method="post">
+            <input type="text" id="username" name="username" placeholder="Username is admin" required>
+            <input type="password" id="password" name="password" placeholder="Password is password" required>
+            <button type="submit">LOGIN</button>
+        </form>
+    </div>
+    <script>
+        gsap.from(".container", { duration: 1, y: -50, opacity: 0});
+        gsap.from(".logo", { duration: 1, scale: 0.8, opacity: 0, delay: 0.3 });
+        gsap.from("h1", { duration: 1, opacity: 0, delay: 0.3 });
+        gsap.from("p", { duration: 1, opacity: 0, delay: 0.3 });
+        gsap.from("form", { duration: 1, opacity: 0, delay: 0.3 });
+        gsap.from("button", { duration: 1, scale: 0.8, opacity: 0, delay: 0.5 });
+    </script>
+</body>
+</html>
