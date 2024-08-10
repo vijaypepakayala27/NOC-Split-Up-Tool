@@ -1,0 +1,142 @@
+/* General Body Styling */
+body {
+    background-color: #121212;
+    color: #FEFDF5;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.logo {
+    width: 150px;  /* Adjust this value to make the logo smaller or larger */
+    height: auto;  /* Keep the aspect ratio */
+    margin-bottom: 5px;  /* Optional: add some space below the logo */
+}
+
+/* Container Styling */
+.container {
+    background-color: #1c1c1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Header Styling */
+h1 {
+    color: #00E3AA;
+    margin-bottom: 30px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 0.9em;
+    color: #808080;
+    text-align: left;
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #3a3a3c;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #2c2c2e;
+    color: #FEFDF5;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #808080;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #00E3AA;
+}
+
+/* File Input Styling */
+input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #3a3a3c;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #2c2c2e;
+    color: #FEFDF5;
+    cursor: pointer;
+}
+
+/* Button Styling */
+button {
+    width: calc(100% - 150px);
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    background-color: #00E3AA;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #FEFDF5;
+    color: #000000;
+    border: 2px solid #00E3AA;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Logout Button Styling */
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #00E3AA;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #FEFDF5;
+    color: #000000;
+    border: 2px solid #00E3AA;
+}
+
+/* Flashes Styling */
+.flashes {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.flashes li {
+    color: red;
+    font-weight: bold;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
